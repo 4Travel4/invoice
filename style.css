@@ -275,7 +275,7 @@ tr:hover .cut {
 
 /* Nuevos estilos direccion cliente*/
 address {
-    font-size: 0.85em; /* Tamaño más pequeño */
+    font-size: 0.75em; /* Tamaño más pequeño */
     line-height: 1.2;  /* Menor espacio entre líneas */
     margin: 0;
 }
@@ -293,7 +293,7 @@ address .location {
 
 /* Estilo para texto más pequeño */
 .small-text {
-    font-size: 0.75em;  /* Reducir aún más el tamaño */
+    font-size: 0.65em;  /* Reducir aún más el tamaño */
     color: #666;        /* Color gris para el texto pequeño */
 }
 
