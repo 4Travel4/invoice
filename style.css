@@ -275,19 +275,25 @@ tr:hover .cut {
 
 /* Nuevos estilos direccion cliente*/
 address {
-    font-size: 0.9em;  
-    line-height: 1.2;
+    font-size: 0.85em; /* Tamaño más pequeño */
+    line-height: 1.2;  /* Menor espacio entre líneas */
     margin: 0;
 }
 
-.client-data {
-    margin-bottom: 0.3em;
-    text-transform: capitalize;
+/* Reducir el espacio entre los párrafos */
+address p {
+    margin-bottom: 0.2em; /* Menos espacio entre párrafos */
 }
 
+/* Mostrar CP y Localidad en la misma línea */
+address .location {
+    display: inline-block; /* Poner en la misma línea */
+    margin-right: 10px;    /* Espacio entre localidad y CP */
+}
+
+/* Estilo para texto más pequeño */
 .small-text {
-    font-size: 0.85em;  
-    color: #666;        
+    font-size: 0.75em;  /* Reducir aún más el tamaño */
+    color: #666;        /* Color gris para el texto pequeño */
 }
-
 
