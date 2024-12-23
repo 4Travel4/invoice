@@ -320,11 +320,13 @@ address .location {
 }
 
 .client-info {
-    flex: 1; /* Ocupa el mismo espacio que el bloque de invoice-info */
+    flex: 2; /* Toma el doble de espacio que el bloque de invoice-info */
 }
 
 .invoice-info {
-    flex: 1; /* Ocupa el mismo espacio que el bloque de client-info */
+    flex: 1; /* Toma la mitad del espacio que el bloque client-info */
+    min-width: 250px; /* Asegura que tenga un ancho mínimo */
+    max-width: 300px; /* Evita que la sección de proforma se haga demasiado grande */
 }
 
 .location {
@@ -338,4 +340,3 @@ address .location {
 .small-text {
     font-size: 0.8em; /* Ajusta el tamaño de las letras */
 }
-
