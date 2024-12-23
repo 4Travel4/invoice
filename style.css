@@ -297,3 +297,48 @@ address .location {
     color: #666;        /* Color gris para el texto pequeño */
 }
 
+/* Ya tienes las reglas existentes */
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0.5in;
+    background: #FFF;
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+}
+
+/* Nuevas reglas para dirección cliente */
+address {
+    font-size: 0.75em; /* Tamaño más pequeño */
+    line-height: 1.2;  /* Menor espacio entre líneas */
+    margin: 0;
+}
+
+/* Reducir el espacio entre los párrafos */
+address p {
+    margin-bottom: 0.2em; /* Menos espacio entre párrafos */
+}
+
+/* Mostrar CP y Localidad en la misma línea */
+address .location {
+    display: inline-block; /* Poner en la misma línea */
+    margin-right: 10px;    /* Espacio entre localidad y CP */
+}
+
+/* Estilo para texto más pequeño */
+.small-text {
+    font-size: 0.65em;  /* Reducir aún más el tamaño */
+    color: #666;        /* Color gris para el texto pequeño */
+}
+
+/* Si ya tienes otras reglas de .small-text o .location, asegúrate de que las que ya tienes no se sobrescriban */
+
+/* Reglas para la tabla meta y balance */
+table.meta, table.balance {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Asegúrate de revisar si hay otras reglas que se superpongan con estas nuevas y ajústalas en consecuencia */
+
+
