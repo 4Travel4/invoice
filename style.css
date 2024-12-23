@@ -1,4 +1,4 @@
-/* reset */
+/* Reset */
 * {
     box-sizing: content-box;
     color: inherit;
@@ -11,7 +11,24 @@
     vertical-align: top;
 }
 
-/* content editable */
+/* General styles */
+html {
+    font: 16px/1 'Open Sans', sans-serif;
+    overflow: auto;
+    padding: 0.5in;
+    background: #999;
+    cursor: default;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0.5in;
+    background: #FFF;
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+}
+
+/* Content editable */
 *[contenteditable] {
     border-radius: 0.25em;
     min-width: 1em;
@@ -32,55 +49,19 @@ span[contenteditable] {
     display: inline-block;
 }
 
-/* heading */
+/* Typography */
 h1 {
     font: bold 100% sans-serif;
     letter-spacing: 0.5em;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1em; /* Añadido para espacio después del título */
+    margin-bottom: 1em;
 }
 
-/* table */
-table {
-    font-size: 75%;
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse; /* Añadido para evitar problemas de bordes en algunas situaciones */
-}
-
-th, td {
-    border: 1px solid #000; /* Añadido un borde sólido para todas las celdas */
-    padding: 0.5em;
-    position: relative;
-    text-align: left;
-}
-
-th {
-    background: #EEE;
-}
-
-/* page */
-html {
-    font: 16px/1 'Open Sans', sans-serif;
-    overflow: auto;
-    padding: 0.5in;
-    background: #999;
-    cursor: default;
-}
-
-body {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0.5in;
-    background: #FFF;
-    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-}
-
-/* header */
+/* Header */
 header {
     margin: 0 0 3em;
-    overflow: hidden; /* Añadido para manejar el colapso del margen superior */
+    overflow: hidden;
 }
 
 header h1 {
@@ -125,7 +106,88 @@ header input {
     width: 100%;
 }
 
-/* article */
+/* Table */
+table {
+    font-size: 75%;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 0.5em;
+    position: relative;
+    text-align: left;
+}
+
+th {
+    background: #EEE;
+}
+
+table.meta,
+table.balance {
+    float: right;
+    width: 36%;
+}
+
+table.meta:after,
+table.balance:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+table.meta th {
+    width: 40%;
+}
+
+table.meta td {
+    width: 60%;
+}
+
+table.inventory th {
+    font-weight: bold;
+    text-align: center;
+}
+
+table.inventory td {
+    text-align: right;
+}
+
+table { 
+    font-size: 75%; 
+    table-layout: fixed; 
+    width: 100%; 
+}
+
+table { 
+    border-collapse: separate; 
+    border-spacing: 2px; 
+}
+
+th, td { 
+    border-width: 1px; 
+    padding: 0.5em; 
+    position: relative; 
+    text-align: left; 
+}
+
+th, td { 
+    border-radius: 0.25em; 
+    border-style: solid; 
+}
+
+th { 
+    background: #EEE; 
+    border-color: #BBB; 
+}
+
+td { 
+    border-color: #DDD; 
+}
+
+/* Article */
 article,
 article address,
 table.meta,
@@ -151,47 +213,7 @@ article address {
     font-weight: bold;
 }
 
-/* table meta & balance */
-table.meta,
-table.balance {
-    float: right;
-    width: 36%;
-}
-
-table.meta:after,
-table.balance:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* table meta */
-table.meta th {
-    width: 40%;
-}
-
-table.meta td {
-    width: 60%;
-}
-
-/* table items */
-table.inventory th {
-    font-weight: bold;
-    text-align: center;
-}
-
-table.inventory td {
-    text-align: right;
-}
-
-table { font-size: 75%; table-layout: fixed; width: 100%; }
-table { border-collapse: separate; border-spacing: 2px; }
-th, td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
-th, td { border-radius: 0.25em; border-style: solid; }
-th { background: #EEE; border-color: #BBB; }
-td { border-color: #DDD; }
-
-/* aside */
+/* Aside */
 aside h1 {
     border: none;
     border-width: 0 0 1px;
@@ -200,7 +222,7 @@ aside h1 {
     border-bottom-style: solid;
 }
 
-/* javascript */
+/* JavaScript */
 .add,
 .cut {
     display: block;
@@ -236,6 +258,7 @@ tr:hover .cut {
     opacity: 1;
 }
 
+/* Print styles */
 @media print {
     * {
         -webkit-print-color-adjust: exact;
@@ -261,84 +284,31 @@ tr:hover .cut {
     margin: 0;
 }
 
-/* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
+/* Custom styles for client address */
+address {
+    font-size: 0.75em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+address p {
+    margin-bottom: 0.2em;
+}
+
+address .location {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.small-text {
+    font-size: 0.65em;
+    color: #666;
+}
+
+/* Custom line under address */
 .custom-line {
     border: none;
     border-bottom: 1px solid #000;
     margin: 5px 0;
 }
-
-/* Estilo para el texto más pequeño */
-.small-text {
-    font-size: 60%;
-}
-
-/* Nuevos estilos direccion cliente*/
-address {
-    font-size: 0.75em; /* Tamaño más pequeño */
-    line-height: 1.2;  /* Menor espacio entre líneas */
-    margin: 0;
-}
-
-/* Reducir el espacio entre los párrafos */
-address p {
-    margin-bottom: 0.2em; /* Menos espacio entre párrafos */
-}
-
-/* Mostrar CP y Localidad en la misma línea */
-address .location {
-    display: inline-block; /* Poner en la misma línea */
-    margin-right: 10px;    /* Espacio entre localidad y CP */
-}
-
-/* Estilo para texto más pequeño */
-.small-text {
-    font-size: 0.65em;  /* Reducir aún más el tamaño */
-    color: #666;        /* Color gris para el texto pequeño */
-}
-
-/* Ya tienes las reglas existentes */
-
-body {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0.5in;
-    background: #FFF;
-    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-}
-
-/* Nuevas reglas para dirección cliente */
-address {
-    font-size: 0.75em; /* Tamaño más pequeño */
-    line-height: 1.2;  /* Menor espacio entre líneas */
-    margin: 0;
-}
-
-/* Reducir el espacio entre los párrafos */
-address p {
-    margin-bottom: 0.2em; /* Menos espacio entre párrafos */
-}
-
-/* Mostrar CP y Localidad en la misma línea */
-address .location {
-    display: inline-block; /* Poner en la misma línea */
-    margin-right: 10px;    /* Espacio entre localidad y CP */
-}
-
-/* Estilo para texto más pequeño */
-.small-text {
-    font-size: 0.65em;  /* Reducir aún más el tamaño */
-    color: #666;        /* Color gris para el texto pequeño */
-}
-
-/* Si ya tienes otras reglas de .small-text o .location, asegúrate de que las que ya tienes no se sobrescriban */
-
-/* Reglas para la tabla meta y balance */
-table.meta, table.balance {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-/* Asegúrate de revisar si hay otras reglas que se superpongan con estas nuevas y ajústalas en consecuencia */
-
 
