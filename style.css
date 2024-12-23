@@ -273,5 +273,23 @@ tr:hover .cut {
     font-size: 60%;
 }
 
+/* Estilos para la dirección del cliente */
+address {
+    font-size: 0.9em;  /* Reduce ligeramente el tamaño de la fuente */
+    line-height: 1.2;  /* Reduce el espacio entre las líneas */
+    margin: 0;
+}
+
+/* Estilos para los datos del cliente */
+.client-data {
+    margin-bottom: 0.3em; /* Espacio más pequeño entre las líneas */
+    text-transform: capitalize; /* Opcional: asegura que las palabras estén capitalizadas */
+}
+
+/* Estilos para las líneas pequeñas */
+.small-text {
+    font-size: 0.85em;  /* Disminuye un poco el tamaño de la fuente para las líneas adicionales */
+    color: #666;        /* Opcional: cambia el color para un toque más suave */
+}
 
 
