@@ -1,13 +1,3 @@
-/* Estilos Generales */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9fbff;
-    color: #333;
-    line-height: 1.4;
-}
-
 /* Encabezado con fondo de imagen tipo marca de agua */
 header {
     background: url('https://via.placeholder.com/1200x300') no-repeat center/cover;
@@ -37,26 +27,30 @@ header > * {
     z-index: 1;
 }
 
+/* Contenedor del Logo y Datos */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Logo */
 .logo-container img {
     max-width: 120px;
     height: auto;
 }
 
-header address {
+/* Datos de la empresa */
+.header-info {
     text-align: right;
     font-style: normal;
     font-size: 13px;
     line-height: 1.2;
+    max-width: 60%;
 }
 
-/* Información Principal */
-.info-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px auto;
-    max-width: 90%;
-}
 
 /* Tarjetas de Cliente y Factura */
 .client-info, .invoice-info {
