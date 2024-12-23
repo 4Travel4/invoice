@@ -273,6 +273,7 @@ tr:hover .cut {
     font-size: 60%;
 }
 
+/* Estilo para el título */
 header h1 {
     text-align: center;
     margin-bottom: 1em;
@@ -280,17 +281,24 @@ header h1 {
     color: #27649d;
 }
 
-/* Contenedor principal del header */
-.header-container {
-    display: flex;
-    justify-content: space-between; /* Separa el logo y la dirección */
-    align-items: center; /* Centra verticalmente */
-    margin-bottom: 1em; /* Espacio inferior */
+/* Contenedor del header */
+.header-content {
+    display: flex; /* Alinea dirección y logo en fila */
+    justify-content: space-between; /* Dirección a la izquierda, logo a la derecha */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 1em;
+}
+
+/* Dirección */
+header address {
+    font-size: 0.9em;
+    line-height: 1.4;
+    max-width: 60%; /* Evita que la dirección ocupe mucho espacio */
 }
 
 /* Contenedor del logo */
 .logo-container {
-    width: 200px; /* Tamaño fijo para el logo */
+    width: 200px;
     height: 200px;
     overflow: hidden;
 }
@@ -299,13 +307,7 @@ header h1 {
 .logo-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Evita deformaciones */
+    object-fit: contain;
 }
 
-/* Dirección de la empresa */
-header address {
-    text-align: right; /* Alinea a la derecha */
-    font-size: 0.9em; /* Tamaño de fuente ajustado */
-    line-height: 1.4; /* Espaciado entre líneas */
-}
 
