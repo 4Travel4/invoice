@@ -36,16 +36,16 @@ header > * {
     z-index: 1;
 }
 
-.logo-container img {
-    max-width: 120px;
-    height: auto;
-}
-
 header address {
     text-align: right;
     font-style: normal;
     font-size: 13px;
     line-height: 1.2;
+}
+
+.logo-container img {
+    max-width: 120px;
+    height: auto;
 }
 
 /* Información Principal */
