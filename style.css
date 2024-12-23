@@ -312,50 +312,28 @@ address .location {
     margin: 5px 0;
 }
 
-.info-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Alinea a la parte superior */
-    gap: 30px; /* Espacio entre los bloques */
-    margin: 20px; /* Márgenes alrededor del contenedor */
+.invoice-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Espacio entre las dos secciones */
 }
 
-.client-info {
-    flex: 2; /* Toma el doble de espacio que el bloque de invoice-info */
-    padding-right: 20px; /* Espacio adicional a la derecha */
-}
-
+.client-info,
 .invoice-info {
-    flex: 1; /* Toma la mitad del espacio que el bloque client-info */
-    min-width: 250px; /* Asegura que tenga un ancho mínimo */
-    max-width: 300px; /* Evita que la sección de proforma se haga demasiado grande */
-    padding-left: 20px; /* Espacio adicional a la izquierda */
-}
-
-.location {
-    margin-right: 10px; /* Espacio entre el código postal y la localidad */
+  flex: 1; /* Ambas secciones ocupan el mismo espacio */
 }
 
 .meta {
-    width: 100%; /* Asegura que la tabla ocupe el 100% del ancho disponible */
-    border-spacing: 10px; /* Espacio entre las celdas de la tabla */
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .meta th,
 .meta td {
-    padding: 8px 12px; /* Espacio interno en las celdas */
-    text-align: left; /* Alineación del texto */
-    vertical-align: top; /* Alineación superior para que el texto se ajuste bien */
-}
-
-.small-text {
-    font-size: 0.8em; /* Ajusta el tamaño de las letras */
+  padding: 8px;
+  text-align: left;
 }
 
 .meta th {
-    font-weight: bold; /* Negrita en los encabezados de la tabla */
-}
-
-.meta td {
-    word-wrap: break-word; /* Asegura que el texto largo se ajuste dentro de la celda */
+  width: 50%;
 }
