@@ -352,13 +352,34 @@ body {
 }
 
 /* Nueva clase para la sección de cliente y resumen */
+/* Estilo para .client-info */
 .client-info {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-between; /* Alinea los elementos a ambos extremos */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
     padding: 20px 0;
     border-bottom: 2px solid #ddd;
 }
+
+.client-info address {
+    flex: 2; /* Toma el 2/3 del espacio */
+}
+
+.client-info .invoice-info {
+    flex: 1; /* Toma el 1/3 del espacio */
+}
+
+/* Estilos para la tabla de la meta */
+table.meta {
+    width: 100%;
+    margin: 0; /* Elimina el margen para que la tabla esté alineada en la misma fila */
+}
+
+table.meta th, table.meta td {
+    padding: 10px;
+    text-align: left;
+}
+
 
 /* Detalles del cliente */
 .client-details {
