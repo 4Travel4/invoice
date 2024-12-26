@@ -8,18 +8,15 @@ body {
     line-height: 1.6;
 }
 
-/* Encabezado */
+/* Fondo con imagen de marca de agua */
 header {
     background: url('https://via.placeholder.com/1200x300') no-repeat center/cover;
     color: white;
     padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-bottom: 3px solid #1e3c72;
     position: relative;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
 header::after {
     content: "";
     background: rgba(0, 0, 0, 0.3); /* Oscurecer ligeramente la imagen */
@@ -36,17 +33,29 @@ header > * {
     z-index: 1;
 }
 
-.logo-container img {
-    max-width: 120px;
-    height: auto;
+/* Contenedor principal */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-header address {
-    text-align: right;
-    font-style: normal;
-    font-size: 13px;
-    line-height: 1.2;
+/* Información de la empresa */
+.header-info {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 60%;
 }
+
+/* Logo */
+.logo-container img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
 
 /* Información Principal */
 .info-container {
