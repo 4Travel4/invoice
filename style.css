@@ -127,23 +127,6 @@ header > * {
     background-color: #e1efff;
 }
 
-/* Botón Agregar (+) */
-a.add {
-    display: inline-block;
-    margin: 20px 30px;
-    padding: 8px 15px;
-    background-color: #1e3c72;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-a.add:hover {
-    background-color: #154076;
-}
-
 /* Tabla de Balance (Totales) */
 .balance {
     width: 60%;
