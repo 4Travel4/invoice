@@ -1,90 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
 
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>REMISIÓN</title>
-		<link rel="stylesheet" href="https://fredyortegon30.github.io/invoice/style.css">
-		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+		<title>PROFORMA</title>
+		<link rel="stylesheet" href="https://4travel4.github.io/invoice/style.css">
 	</head>
 	<body>
-		<header>
-			<h1>REMISIÓN</h1>
-			<address>
-				<p>MI EMPRESA</p>
-				<p>NIT 1111111111<br>Calle 11- 10-33</p>
-				<p>Pereira</p>
-			</address>
+<header>
+    <div class="header-container">
+        <div class="header-info">
+            <address>
+                <p>T4L NORTHEN SPAIN, S.L.</p>
+                <p>Avda. Herrera Oria, 40 4BC</p>
+                <p>39011-Santander</p>
+                <p>Cantabria, España</p>
+                <p>TAX-C.I.F.: B 39786728</p>
+                <p>Tlf.: +34 659 674 025</p>
+                <p>Email: info@travel4learning.com</p>
+            </address>
+        </div>
+        <div class="logo-container">
+            <img src="http://surl.li/orzxyv" alt="Logo de la empresa">
+        </div>
+    </div>
+</header>
+		<article>
+  <div class="info-container">
+  <div class="client-info">
+    <address>
+      <p>&lt;&lt;[CLIENTE].[CLIENTE]&gt;&gt;</p>
+      <p class="small-text">&lt;&lt;[DIRECCION POSTAL]&gt;&gt;</p>
 
-<div style="float: right;">
-    <img alt="" src="https://acortar.link/caSNRS" style="width: 100px; height: 100px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+      <!-- Localidad y CP en la misma línea -->
+      <p class="small-text">
+          <span class="location">&lt;&lt;[CP]&gt;&gt;</span>
+          <span class="location">&lt;&lt;[LOCALIDAD]&gt;&gt;</span>
+      </p>
+
+      <p class="small-text">&lt;&lt;[PAIS]&gt;&gt;</p>
+      <p class="small-text">&lt;&lt;[TELEFONO]&gt;&gt;</p>
+    </address>
+  </div>
+
+  <div class="invoice-info">
+    <table class="meta">
+      <tr>
+        <th><span>PROFORMA: </span></th>
+        <td><span>&lt;&lt;[NUMERO]&gt;&gt;</span></td>
+      </tr>
+      <tr>
+        <th><span>Fecha:</span></th>
+        <td><span>&lt;&lt;[FECHA]&gt;&gt;</span></td>
+      </tr>
+      <tr>
+        <th><span>Total:</span></th>
+        <td><span>&lt;&lt;[TOTAL ALOJAMIENTO] + [TOTAL EXTRAS] + [TOTAL ACTIVIDADES]&gt;&gt;</span></td>
+      </tr>
+    </table>
+  </div>
 </div>
 
 
-		</header>
-		<article>
-			<h1>Recipient</h1>
-			<address>
-				<p>&lt;&lt;[id_cliente].[Nombre_cliente]&gt;&gt;<br>-</p>
-                <p class="small-text"><br>Email: &lt;&lt;[id_cliente].[Email]&gt;&gt;</p>
-                <p class="small-text">Cel:&lt;&lt;[id_cliente].[Celular]&gt;&gt;</p>
-			</address>
-			<table class="meta">
-				<tr>
-					<th><span>Remisión #</span></th>
-					<td><span>&lt;&lt;[N_factura]&gt;&gt;</span></td>
-				</tr>
-				<tr>
-					<th><span>Fecha</span></th>
-					<td><span>&lt;&lt;[Fecha]&gt;&gt;</span></td>
-				</tr>
-				<tr>
-					<th><span>Total</span></th>
-					<td><span>&lt;&lt;[TOTAL VENTA]&gt;&gt;</span></td>
-				</tr>
-			</table>
-			<table class="inventory">
-				<thead>
-					<tr>
-						<th><span>Producto</span></th>
-						<th><span>Descripcion</span></th>
-						<th><span>Valor ud</span></th>
-						<th><span>Cantidad</span></th>
-						<th><span>Subtotal</span></th>
-					</tr>
-				</thead>
-				<tbody>
-				<p><span>&lt;&lt;Start: SELECT(DETALLE_VENTAS[id_detalle],[id_encabezado_venta]=[id_encabezado]) &gt;&gt;</span></p>
-					<tr>
-						<td><a class="cut">-</a>&lt;&lt;[id_producto].[Nombre de producto]&gt;&gt;</td>
-						<td><span></span></td>
-				        <td><span>&lt;&lt;[Valor_unitario]&gt;&gt;</span></td>
-						<td><span>&lt;&lt;[Cantidad]&gt;&gt;</span></td>
-						<td><span>&lt;&lt;[Subtotal]&gt;&gt;</span></td>
-					</tr>
-				<p><span>&lt;&lt; end &gt;&gt;</span></p>
-				</tbody>
-			</table>
-			<a class="add">+</a>
-			<table class="balance">
-				<tr>
-					<th><span>Total</span></th>
-					<td><span>&lt;&lt;[TOTAL VENTA]&gt;&gt;</span></td>
-				</tr>
-				<tr>
-					<th><span>Otros conceptos</span></th>
-					<td><span data-prefix="$"></span><span>0.00</span></td>
-				</tr>
-				<tr>
-					<th><span>Total a pagar</span></th>
-					<td><span>&lt;&lt;[TOTAL VENTA]&gt;&gt;</span></td>
-				</tr>
-			</table>
-		</article>
-		<aside>
-			<h1><span>Notas adicionales</span></h1>
-			<div>
-				<p>Pagos a la cuenta de ahorros bancolombia # </p>
-			</div>
-		</aside>
+
+
+  <table class="inventory">
+    <thead>
+      <tr>
+        <th><span>Alojamiento</span></th>
+        <th><span>Pax</span></th>
+        <th><span>Precio</span></th>
+        <th><span>Noches</span></th>
+        <th><span>Total</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <p><span>&lt;&lt;Start: [Related EXPEDIENTES_ALOJAMIENTOs]&gt;&gt;</span></p>
+      <tr>
+        <td><a class="cut">-</a>&lt;&lt;[ALOJAMIENTO].[ALOJAMIENTO]&gt;&gt;</td>
+        <td><span>&lt;&lt;[PAX]&gt;&gt;</span></td>
+        <td><span>&lt;&lt;[ALOJAMIENTO].[PVP 2025]&gt;&gt;</span></td>
+        <td><span>&lt;&lt;HOUR([ID_EXPEDIENTE].[Fecha Fin] - [ID_EXPEDIENTE].[Fecha Entrada]) / 24&gt;&gt;</span></td>
+        <td><span>&lt;&lt;HOUR([ID_EXPEDIENTE].[Fecha Fin] - [ID_EXPEDIENTE].[Fecha Entrada]) / 24&gt;&gt;</span></td>
+      </tr>
+      <p><span>&lt;&lt;End&gt;&gt;</span></p>
+    </tbody>
+  </table>
+  
+  <a class="add">+</a>
+  
+  <table class="balance">
+    <tr>
+      <th><span>Total</span></th>
+      <td><span>&lt;&lt;[TOTAL]&gt;&gt;</span></td>
+    </tr>
+    
+    <tr>
+      <th><span>Total a pagar</span></th>
+      <td><span>&lt;&lt;[TOTAL ALOJAMIENTO] + [TOTAL EXTRAS] + [TOTAL ACTIVIDADES]&gt;&gt;</span></td>
+    </tr>
+  </table>
+</article>
+
+
 	</body>
+</html>
 </html>
