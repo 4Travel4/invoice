@@ -6,8 +6,10 @@ body {
     background-color: #f9fbff;
     color: #333;
     line-height: 1.6;
+    position: relative;
+    min-height: 100vh;  /* Asegura que la página tenga la altura mínima */
+    padding-bottom: 50px; /* Espacio para el pie de página */
 }
-
 
 /* Contenedor principal */
 .header-container {
@@ -28,13 +30,11 @@ body {
 
 /* Logo */
 .logo-container img {
-    max-width: 250px; /* Limita el ancho máximo */
-    height: auto; /* Mantiene la proporción */
+    max-width: 250px;
+    height: auto;
     display: block;
-    object-fit: contain; /* Asegura que la imagen se adapte bien */
+    object-fit: contain;
 }
-
-
 
 /* Información Principal */
 .info-container {
@@ -138,6 +138,16 @@ body {
     font-weight: bold;
 }
 
+/* Evitar que las filas de inventario y balance se dividan entre páginas */
+.inventory, .balance {
+    page-break-inside: avoid;  /* Evita que las tablas se dividan entre páginas */
+}
+
+/* Hacer que los encabezados de la tabla (thead) se repitan en cada página */
+.inventory thead, .balance thead {
+    display: table-header-group;
+}
+
 /* Pie de Página */
 footer {
     text-align: justify;  /* Justifica el texto */
@@ -146,16 +156,6 @@ footer {
     font-size: 7px;
     color: #777;
     page-break-before: auto; /* Evita que el pie de página se rompa en páginas nuevas */
-}
-
-/* Para asegurar que el pie de página esté al final de la página */
-body {
-    position: relative;
-    min-height: 100vh;
-    padding-bottom: 50px; /* Para darle espacio al pie de página */
-}
-
-footer {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -163,3 +163,26 @@ footer {
     text-align: justify;  /* Justifica el texto */
 }
 
+/* Repetir pie de página en cada página */
+footer p {
+    margin: 0;
+    padding: 5px 0;
+    display: block; /* Cada párrafo ocupa el 100% del ancho */
+}
+
+/* Asegurarse de que el contenido no se desborde y el pie se quede en su lugar */
+@page {
+    size: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: block;
+    position: relative;
+}
+
+/* Asegura que las tablas no se dividan entre páginas */
+.inventory tr, .balance tr {
+    page-break-inside: avoid; /* Impide la división de filas entre páginas */
+}
