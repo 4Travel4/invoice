@@ -143,7 +143,7 @@ footer {
     text-align: justify;  /* Justifica el texto */
     margin-top: 30px;
     padding: 10px 0;
-    font-size: 12px;
+    font-size: 8px;
     color: #777;
     page-break-before: auto; /* Evita que el pie de página se rompa en páginas nuevas */
 }
