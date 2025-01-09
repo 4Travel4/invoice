@@ -126,10 +126,10 @@ body {
 
 .Regimen-text {
     text-align: center; /* Centra el texto horizontalmente */
-    color: 1c81d0; /* Cambia el color del texto a azul */
+    color: 245893; /* Cambia el color del texto a azul */
     font-size: 12px; /* Ajusta el tamaño del texto */
     font-weight: bold; /* Opcional: hace el texto más grueso */
-    margin: 20px 0; /* Agrega espacio superior e inferior */
+    margin: 15px 0; /* Agrega espacio superior e inferior */
     word-wrap: break-word; /* Permite que el texto se ajuste dentro del contenedor si es muy largo */
 }
 
