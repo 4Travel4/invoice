@@ -9,6 +9,7 @@ body {
     position: relative;
     min-height: 100vh;  /* Asegura que la página tenga la altura mínima */
     padding-bottom: 50px; /* Espacio para el pie de página */
+    overflow: hidden;
 }
 
 /* Contenedor principal */
@@ -78,6 +79,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    page-break-inside: avoid;  /* Evita que se divida entre páginas */
 }
 
 .inventory thead {
@@ -117,6 +119,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    page-break-inside: avoid;  /* Evita que se divida entre páginas */
 }
 
 .balance th,
@@ -138,9 +141,9 @@ body {
     font-weight: bold;
 }
 
-/* Evitar que las filas de inventario y balance se dividan entre páginas */
-.inventory, .balance {
-    page-break-inside: avoid;  /* Evita que las tablas se dividan entre páginas */
+/* Evitar la división de contenido */
+.inventory tr, .balance tr {
+    page-break-inside: avoid; /* Evita que las filas se dividan entre páginas */
 }
 
 /* Hacer que los encabezados de la tabla (thead) se repitan en cada página */
@@ -160,7 +163,6 @@ footer {
     bottom: 0;
     width: 100%;
     left: 0;
-    text-align: justify;  /* Justifica el texto */
 }
 
 /* Repetir pie de página en cada página */
@@ -177,12 +179,13 @@ footer p {
     padding: 0;
 }
 
+/* Evitar que las tablas se dividan entre páginas */
+.inventory, .balance {
+    page-break-inside: avoid;
+}
+
 body {
     display: block;
     position: relative;
 }
 
-/* Asegura que las tablas no se dividan entre páginas */
-.inventory tr, .balance tr {
-    page-break-inside: avoid; /* Impide la división de filas entre páginas */
-}
