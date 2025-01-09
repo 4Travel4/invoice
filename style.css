@@ -7,9 +7,9 @@ body {
     color: #333;
     line-height: 1.6;
     position: relative;
-    min-height: 100vh;  /* Asegura que la página tenga la altura mínima */
-    padding-bottom: 50px; /* Espacio para el pie de página */
-    overflow: hidden;
+    min-height: 100vh;
+    padding-bottom: 100px; /* Asegura que haya espacio suficiente para el pie de página */
+    box-sizing: border-box;
 }
 
 /* Contenedor principal */
@@ -111,7 +111,7 @@ body {
 /* Tabla de Balance (Totales) */
 .balance {
     width: 60%;
-    margin-left: 35%; /* Desplaza la tabla hacia la derecha */
+    margin-left: 35%;
     margin-top: 30px;
     margin-bottom: 30px;
     border-collapse: collapse;
@@ -146,7 +146,7 @@ body {
     page-break-inside: avoid; /* Evita que las filas se dividan entre páginas */
 }
 
-/* Hacer que los encabezados de la tabla (thead) se repitan en cada página */
+/* Asegurarse de que los encabezados de la tabla (thead) se repitan en cada página */
 .inventory thead, .balance thead {
     display: table-header-group;
 }
@@ -159,29 +159,24 @@ footer {
     font-size: 7px;
     color: #777;
     page-break-before: auto; /* Evita que el pie de página se rompa en páginas nuevas */
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
+    position: fixed;  /* Fija el pie de página */
+    bottom: 0;  /* Lo coloca al final de la página */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
 }
 
-/* Repetir pie de página en cada página */
+/* Pie de página en múltiples líneas */
 footer p {
     margin: 0;
     padding: 5px 0;
     display: block; /* Cada párrafo ocupa el 100% del ancho */
+    font-size: 8px;
 }
 
-/* Asegurarse de que el contenido no se desborde y el pie se quede en su lugar */
+/* Forzar el pie de página a que se mantenga en la misma página */
 @page {
     size: auto;
     margin: 0;
     padding: 0;
-}
-
-/* Evitar que las tablas se dividan entre páginas */
-.inventory, .balance {
-    page-break-inside: avoid;
 }
 
 body {
@@ -189,3 +184,12 @@ body {
     position: relative;
 }
 
+/* Evitar que las tablas se dividan entre páginas */
+.inventory, .balance {
+    page-break-inside: avoid;
+}
+
+/* Ajustes para márgenes y contenido */
+body {
+    padding-bottom: 100px; /* Asegura que haya suficiente espacio para el pie de página */
+}
