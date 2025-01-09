@@ -8,33 +8,6 @@ body {
     line-height: 1.6;
 }
 
-/* Fondo con imagen de marca de agua */
-header {
-    background: url(https://acortar.link/dAH8sU) no-repeat center/cover;
-    color: white;
-    padding: 20px 30px;
-    border-bottom: 3px solid #1e3c72;
-    position: relative;
-    z-index: 0; /* Asegúrate de que esté en el nivel base */
-    overflow: hidden; /* Previene problemas de contenido desbordado */
-}
-
-header::after {
-    content: "";
-    background: rgba(0, 0, 0, 0.3); /* Oscurecer ligeramente la imagen */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Coloca la capa detrás del contenido */
-}
-
-
-header > * {
-    position: relative;
-    z-index: 1;
-}
 
 /* Contenedor principal */
 .header-container {
