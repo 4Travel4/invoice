@@ -154,9 +154,9 @@ body {
 
 /* Pie de Página */
 footer {
-    text-align: center;
+    text-align: justify;
     margin-top: 30px;
-    padding: 10px 0;
+    padding: 10px 10px;
     font-size: 7px;
     color: #777;
     page-break-before: auto;
