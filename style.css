@@ -111,9 +111,10 @@ body {
 
 .inventory td {
     padding: 10px;
+    text-align: center;
     border: 1px solid #d0e2f1;
     font-size: 12px;
-    text-align: center;
+    
 }
 
 .inventory tr:nth-child(even) {
@@ -177,6 +178,16 @@ body {
 
 /* Pie de Página */
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9fbff;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #d0e2f1;
+    font-size: 12px;
+}
+footer {
     text-align: justify;
     margin-top: 30px;
     padding: 10px 10px;
@@ -209,7 +220,7 @@ footer p {
 body {
     display: block;
     position: relative;
-    padding-bottom: 100px; /* Asegura que haya espacio para el pie de página */
+    padding-bottom: 150px; /* Asegura que haya espacio para el pie de página */
 }
 
 /* Evitar que las tablas se dividan entre páginas */
