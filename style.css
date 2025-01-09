@@ -108,7 +108,7 @@ body {
 
 /* Tabla de Balance (Totales) */
 .balance {
-    width: 60%;
+    width: 90%;
     margin: 30px 0 30px auto;
     border-collapse: collapse;
     background-color: #ffffff;
