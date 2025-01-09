@@ -95,7 +95,7 @@ body {
     padding: 10px;
     border: 1px solid #d0e2f1;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
 }
 
 .inventory tr:nth-child(even) {
