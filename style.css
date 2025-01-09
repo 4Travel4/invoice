@@ -88,14 +88,14 @@ body {
 .inventory th {
     padding: 12px;
     font-size: 14px;
-    text-align: left;
+    text-align: center;
 }
 
 .inventory td {
     padding: 10px;
     border: 1px solid #d0e2f1;
     font-size: 12px;
-    text-align: center;
+    text-align: left;
 }
 
 .inventory tr:nth-child(even) {
