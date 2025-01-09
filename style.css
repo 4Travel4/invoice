@@ -153,22 +153,25 @@ body {
 
 /* Pie de Página */
 footer {
-    text-align: justify;  /* Justifica el texto */
+    text-align: justify;
     margin-top: 30px;
     padding: 10px 0;
     font-size: 7px;
     color: #777;
-    page-break-before: auto; /* Evita que el pie de página se rompa en páginas nuevas */
-    position: fixed;  /* Fija el pie de página */
-    bottom: 0;  /* Lo coloca al final de la página */
-    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+    page-break-before: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding-left: 20px; /* Espacio izquierdo en el pie */
+    padding-right: 20px; /* Espacio derecho en el pie */
 }
 
 /* Pie de página en múltiples líneas */
 footer p {
     margin: 0;
     padding: 5px 0;
-    display: block; /* Cada párrafo ocupa el 100% del ancho */
+    display: block;
     font-size: 8px;
 }
 
@@ -182,14 +185,10 @@ footer p {
 body {
     display: block;
     position: relative;
+    padding-bottom: 100px; /* Asegura que haya espacio para el pie de página */
 }
 
 /* Evitar que las tablas se dividan entre páginas */
 .inventory, .balance {
     page-break-inside: avoid;
-}
-
-/* Ajustes para márgenes y contenido */
-body {
-    padding-bottom: 100px; /* Asegura que haya suficiente espacio para el pie de página */
 }
