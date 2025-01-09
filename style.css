@@ -45,7 +45,7 @@ header > * {
 .header-info {
     text-align: left;
     font-size: 14px;
-    line-height: 0.5;
+    line-height: 1;
     max-width: 60%;
 }
 
