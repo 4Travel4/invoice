@@ -69,17 +69,10 @@ body {
     margin: 5px 0;
 }
 
-.tables-container {
-    display: flex; /* Flexbox para alinear elementos */
-    justify-content: space-between; /* Espaciado horizontal entre las tablas */
-    align-items: flex-start; /* Alineación vertical */
-    gap: 20px; /* Espaciado opcional entre las tablas */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-
 /* Tabla de Inventario (Detalle de Factura) */
 .inventory {
-    width: 70%;
-    margin: 0;
+    width: 60%;
+    margin: 30px auto;
     border-collapse: collapse;
     background-color: #ffffff;
     border-radius: 8px;
@@ -115,8 +108,8 @@ body {
 
 /* Tabla de Balance (Totales) */
 .balance {
-    width: 25%;
-    margin: 0;
+    width: 60%;
+    margin: 30px 0 0 auto;
     border-collapse: collapse;
     background-color: #ffffff;
     border-radius: 8px;
