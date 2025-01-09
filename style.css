@@ -124,16 +124,6 @@ body {
     background-color: #e1efff;
 }
 
-.Regimen-text {
-    text-align: center; /* Centra el texto horizontalmente */
-    color: 245893; /* Cambia el color del texto a azul */
-    font-size: 12px; /* Ajusta el tamaño del texto */
-    font-weight: bold; /* Opcional: hace el texto más grueso */
-    margin: 15px 0; /* Agrega espacio superior e inferior */
-    word-wrap: break-word; /* Permite que el texto se ajuste dentro del contenedor si es muy largo */
-}
-
-
 /* Tabla de Balance (Totales) */
 .balance {
     width: 100%; /* Cambié el ancho a 100% */
@@ -164,6 +154,15 @@ body {
 .balance tr:last-child td {
     font-size: 16px;
     font-weight: bold;
+}
+
+.Regimen-text {
+    text-align: center; /* Centra el texto horizontalmente */
+    color: 245893; /* Cambia el color del texto a azul */
+    font-size: 12px; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Opcional: hace el texto más grueso */
+    margin: 15px 0; /* Agrega espacio superior e inferior */
+    word-wrap: break-word; /* Permite que el texto se ajuste dentro del contenedor si es muy largo */
 }
 
 /* Asegura que las filas de las tablas no se dividan entre páginas */
