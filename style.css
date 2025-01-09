@@ -8,8 +8,10 @@ body {
     line-height: 1.6;
     position: relative;
     min-height: 100vh;
-    padding-bottom: 100px; /* Asegura que haya espacio suficiente para el pie de página */
-    box-sizing: border-box;
+    padding-bottom: 100px; /* Espacio para el pie de página */
+    padding-left: 20px; /* Espacio izquierdo */
+    padding-right: 20px; /* Espacio derecho */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
 }
 
 /* Contenedor principal */
@@ -18,7 +20,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin: 20px 30px;
+    margin: 20px 0;
 }
 
 /* Información de la empresa */
@@ -42,7 +44,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    margin: 20px 30px;
+    margin: 20px 0;
 }
 
 /* Caja Cliente */
@@ -72,14 +74,14 @@ body {
 
 /* Tabla de Inventario (Detalle de Factura) */
 .inventory {
-    width: 90%;
+    width: 100%; /* Cambié el ancho a 100% */
     margin: 30px auto;
     border-collapse: collapse;
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    page-break-inside: avoid;  /* Evita que se divida entre páginas */
+    page-break-inside: avoid;
 }
 
 .inventory thead {
@@ -110,8 +112,7 @@ body {
 
 /* Tabla de Balance (Totales) */
 .balance {
-    width: 60%;
-    margin-left: 35%;
+    width: 100%; /* Cambié el ancho a 100% */
     margin-top: 30px;
     margin-bottom: 30px;
     border-collapse: collapse;
@@ -119,7 +120,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    page-break-inside: avoid;  /* Evita que se divida entre páginas */
+    page-break-inside: avoid;
 }
 
 .balance th,
@@ -141,9 +142,9 @@ body {
     font-weight: bold;
 }
 
-/* Evitar la división de contenido */
+/* Asegura que las filas de las tablas no se dividan entre páginas */
 .inventory tr, .balance tr {
-    page-break-inside: avoid; /* Evita que las filas se dividan entre páginas */
+    page-break-inside: avoid;
 }
 
 /* Asegurarse de que los encabezados de la tabla (thead) se repitan en cada página */
@@ -192,3 +193,4 @@ body {
 .inventory, .balance {
     page-break-inside: avoid;
 }
+
