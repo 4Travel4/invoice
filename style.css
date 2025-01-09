@@ -88,7 +88,7 @@ body {
 .inventory th {
     padding: 12px;
     font-size: 14px;
-    text-align: center;
+    text-align: left;
 }
 
 .inventory td {
