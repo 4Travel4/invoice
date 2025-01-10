@@ -12,6 +12,7 @@ body {
     padding-left: 20px; /* Espacio izquierdo */
     padding-right: 20px; /* Espacio derecho */
     box-sizing: border-box; /* Incluir padding en el ancho total */
+    overflow-x: hidden; /* Evitar que el contenido se desborde horizontalmente */
 }
 
 /* Contenedor principal */
@@ -85,11 +86,10 @@ body {
     font-weight: bold; /* Hace que los encabezados de la tabla sean más destacados */
 }
 
-
 /* Tabla de Inventario (Detalle de Factura) */
 .inventory {
     width: 100%; /* Cambié el ancho a 100% */
-    margin: 30px auto;
+    margin: 30px 0; /* Reducido margen superior e inferior */
     border-collapse: collapse;
     background-color: #ffffff;
     border-radius: 8px;
@@ -114,7 +114,6 @@ body {
     text-align: center;
     border: 1px solid #d0e2f1;
     font-size: 10px;
-    
 }
 
 .inventory tr:nth-child(even) {
@@ -157,9 +156,10 @@ body {
     font-weight: bold;
 }
 
+/* Texto para régimen */
 .Regimen-text {
     text-align: center; /* Centra el texto horizontalmente */
-    color: 245893; /* Cambia el color del texto a azul */
+    color: #1e3c72; /* Cambia el color del texto a azul */
     font-size: 12px; /* Ajusta el tamaño del texto */
     font-weight: bold; /* Opcional: hace el texto más grueso */
     margin: 15px 0; /* Agrega espacio superior e inferior */
@@ -171,60 +171,41 @@ body {
     page-break-inside: avoid;
 }
 
-/* Asegurarse de que los encabezados de la tabla (thead) se repitan en cada página */
-.inventory thead, .balance thead {
-    display: table-header-group;
-}
+/* Paginación y ajuste de página */
+@media print {
+    body {
+        width: 100%;
+        padding: 0;
+    }
 
-/* Pie de Página */
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f9fbff;
-    text-align: center;
-    padding: 10px;
-    border-top: 1px solid #d0e2f1;
-    font-size: 12px;
-}
-footer {
-    text-align: justify;
-    margin-top: 30px;
-    padding: 10px 10px;
-    font-size: 7px;
-    color: #777;
-    page-break-before: auto;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    padding-left: 20px; /* Espacio izquierdo en el pie */
-    padding-right: 20px; /* Espacio derecho en el pie */
-}
+    .header-container, .info-container {
+        margin: 0;
+    }
 
-/* Pie de página en múltiples líneas */
-footer p {
-    margin: 0;
-    padding: 5px 0;
-    display: block;
-    font-size: 8px;
-}
+    .inventory, .balance {
+        margin: 10px 0;
+    }
 
-/* Forzar el pie de página a que se mantenga en la misma página */
-@page {
-    size: auto;
-    margin: 0;
-    padding: 0;
-}
+    .Regimen-text {
+        margin-top: 10px;
+    }
 
-body {
-    display: block;
-    position: relative;
-    padding-bottom: 150px; /* Asegura que haya espacio para el pie de página */
-}
+    /* Reduce el tamaño de la fuente para impresión y ajusta los márgenes */
+    body {
+        font-size: 12px;
+    }
 
-/* Evitar que las tablas se dividan entre páginas */
-.inventory, .balance {
-    page-break-inside: avoid;
+    .inventory th, .inventory td {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    .balance th, .balance td {
+        font-size: 12px;
+    }
+
+    .invoice-info th, .invoice-info td {
+        font-size: 12px;
+    }
 }
 
