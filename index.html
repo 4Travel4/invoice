@@ -20,7 +20,7 @@
             </address>
         </div>
         <div class="logo-container">
-            <img src="http://surl.li/orzxyv" alt="Logo de la empresa">
+            <img src="https://drive.google.com/drive/folders/1oNjRZoRZo0A6bJbQYR8gDXlcahI-MEE3" alt="Logo de la empresa">
         </div>
     </div>
 </header>
@@ -49,8 +49,20 @@
                     <td><span>&lt;&lt;[FECHA]&gt;&gt;</span></td>
                 </tr>
                 <tr>
-                    <th><span>Total:</span></th>
-                    <td><span>&lt;&lt;[TOTAL ALOJAMIENTO] + [TOTAL EXTRAS] + [TOTAL ACTIVIDADES]&gt;&gt;</span></td>
+                    <th><span>Expediente:</span></th>
+                    <td><span>&lt;&lt;[EXPEDIENTE].[Referencia Cliente]&gt;&gt;</span></td>
+                </tr>
+                <tr>
+                    <th><span>Responsable:</span></th>
+                    <td><span>&lt;&lt;[EXPEDIENTE].[RESPONSABLE]&gt;&gt;</span></td>
+                </tr>
+                <tr>
+                    <th><span>Fecha In:</span></th>
+                    <td><span>&lt;&lt;[EXPEDIENTE].[Fecha Entrada]&gt;&gt;</span></td>
+                </tr>
+                <tr>
+                    <th><span>Fecha Out:</span></th>
+                    <td><span>&lt;&lt;[EXPEDIENTE].[Fecha Fin]&gt;&gt;</span></td>
                 </tr>
             </table>
         </div>
@@ -68,7 +80,7 @@
         <tbody>
             <p><span>&lt;&lt;Start: [Related EXPEDIENTES_ALOJAMIENTOs]&gt;&gt;</span></p>
             <tr>
-                <td><a class="cut">-</a>&lt;&lt;[ALOJAMIENTO].[ALOJAMIENTO]&gt;&gt;</td>
+                <td>&lt;&lt;[ALOJAMIENTO].[ALOJAMIENTO]&gt;&gt;</td>
                 <td><span>&lt;&lt;[PAX]&gt;&gt;</span></td>
                 <td><span>&lt;&lt;[ALOJAMIENTO].[PVP 2025]&gt;&gt;</span></td>
                 <td><span>&lt;&lt;HOUR([ID_EXPEDIENTE].[Fecha Fin] - [ID_EXPEDIENTE].[Fecha Entrada]) / 24&gt;&gt;</span></td>
@@ -88,7 +100,7 @@
         <tbody>
             <p><span>&lt;&lt;Start: [Related EXPEDIENTES_EXTRASs]&gt;&gt;</span></p>
             <tr>
-                <td><a class="cut">-</a>&lt;&lt;[EXTRA].[EXTRA]&gt;&gt;</td>
+                <td>&lt;&lt;[EXTRA].[EXTRA]&gt;&gt;</td>
                 <td><span>&lt;&lt;[PAX]&gt;&gt;</span></td>
                 <td><span>&lt;&lt;[EXTRA].[PVP 2025]&gt;&gt;</span></td>
                 <td><span>&lt;&lt;[NOCHES]&gt;&gt;</span></td>
@@ -97,7 +109,7 @@
             <p><span>&lt;&lt;End&gt;&gt;</span></p>
             <p><span>&lt;&lt;Start: [Related EXPEDIENTES_ACTIVIDADs]&gt;&gt;</span></p>
             <tr>
-                <td><a class="cut">-</a>&lt;&lt;[Tipo_Servicio_Virtual]&gt;&gt;</td>
+                <td>&lt;&lt;[ID_ACTIVIDAD]&gt;&gt;</td>
                 <td><span>&lt;&lt;[PAX]&gt;&gt;</span></td>
                 <td><span>&lt;&lt;[PVP 2025]&gt;&gt;</span></td>
                 <td></td>
@@ -106,12 +118,21 @@
             <p><span>&lt;&lt;End&gt;&gt;</span></p>
         </tbody>
     </table>
+        
     <table class="balance">
         <tr>
             <th><span>Total Factura</span></th>
             <td><span>&lt;&lt;[TOTAL ALOJAMIENTO] + [TOTAL EXTRAS] + [TOTAL ACTIVIDADES]&gt;&gt;</span></td>
         </tr>
     </table>
+        <div class="Regimen-text">
+            &lt;&lt;[CLIENTE].[TEXTO]&gt;&gt;
+        </div>
 </article>
 </body>
+<footer>
+    <p>Cláusula informativa RGPD: De acuerdo con lo establecido en el Reglamento General de Protección de Datos, le informamos que trataremos sus datos personales con la finalidad de realizar la gestión administrativa, contable y fiscal, así como enviarle comunicaciones comerciales sobre nuestros productos y/o servicios . Los datos proporcionados se conservarán mientras se mantenga la relación comercial o durante el tiempo necesario para cumplir con las obligaciones legales. Los datos no se cederán a terceros salvo en los casos en que exista una obligación legal y los trataremos en base a su consentimiento o la ejecución de un contrato o por obligación legal. Asimismo, le informamos de la posibilidad de ejercer los siguientes derechos sobre sus datos personales: derecho de acceso, rectificación, supresión u olvido,limitación, oposición, portabilidad y a retirar el consentimiento prestado. Para ello podrá enviar un email a: info@travel4learning.com Además, el interesado puede dirigirse a la Autoridad de Control en materia de Protección de Datos competente para obtener información adicional o presentar una reclamación. Datos identificativos del responsable: T4L NORTHERN SPAIN S.L., B39786728, AVDA. HERRERA ORIA 40 4 B - 39011 - SANTANDER - CANTABRIA, 659674025
+</p>
+    <p>T4L NORTHEN SPAIN S.L. - MAYORISTA/MINORISTA CICAV:39106 - Reg Mercantil santander - 1064. F11. H-S-28404. Secc Gral. Ins. 1ª. C.I.F. B39786728. S.L. Avenida Cardenal Herrera Oria 40 - 4BC - 39011 SANTANDER - www.travel4learning.com - info@travel4learning.com</p>
+</footer>
 </html>
