@@ -191,13 +191,13 @@ footer {
 
 /* Primer párrafo (Cláusula informativa RGPD) */
 footer p:first-of-type {
-    text-align: center; /* Justificado por los extremos */
+    text-align: justify; /* Justificado por los extremos */
     margin: 0; /* Elimina márgenes innecesarios */
 }
 
 /* Segundo párrafo (Datos identificativos) */
 footer p:last-of-type {
-    text-align: justify; /* Justificado solo a la izquierda */
+    text-align: center; /* Justificado solo a la izquierda */
     margin-top: 10px; /* Espacio superior para separar del primer párrafo */
 }
 
