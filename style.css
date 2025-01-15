@@ -182,6 +182,7 @@ body {
     font-weight: bold; /* Opcional: hace el texto más grueso */
     margin: 15px 0; /* Agrega espacio superior e inferior */
     word-wrap: break-word; /* Permite que el texto se ajuste dentro del contenedor si es muy largo */
+    clear: both; /* Asegura que este texto se posicione debajo de cualquier elemento flotante */
 }
 
 /* Estilos del footer */
