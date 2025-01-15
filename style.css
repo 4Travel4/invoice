@@ -32,6 +32,10 @@ body {
     max-width: 60%;
 }
 
+.header-info address {
+    font-style: normal;
+}
+
 /* Logo */
 .logo-container img {
     max-width: 250px;
