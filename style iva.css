@@ -141,19 +141,43 @@ body {
 }
 /* Tabla de Impuestos */
 
-table.summary {
-    margin: 20px 0;
+/* Tabla de Resumen (Summary) */
+.summary {
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    page-break-inside: avoid;
+    text-align: center;
 }
-table.summary th, table.summary td {
-    border: 1px solid #ddd;
-    padding: 8px;
+
+.summary th,
+.summary td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #d0e2f1;
+    color: #1e3c72;
 }
-table.summary th {
-    background-color: #f2f2f2;
-    text-align: left;
+
+.summary th {
+    background-color: #f0f7ff;
+    font-weight: bold;
+    color: #1e3c72;
 }
+
+.summary td {
+    font-size: 14px;
+}
+
+.summary tr:last-child td {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 
 
 /* Tabla de Balance (Totales) */
