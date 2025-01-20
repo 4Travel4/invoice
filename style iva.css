@@ -140,23 +140,41 @@ body {
     background-color: #e1efff;
 }
 
-/* Tabla de Resumen (Summary) - Una sola línea */
-<table class="summary">
-    <tr>
-        <!-- Cabecera con descripciones -->
-        <th><span>Margen de Beneficio</span></th>
-        <th><span>Base Imponible</span></th>
-        <th><span>IVA (21%)</span></th>
-        <th><span>Total Factura con IVA</span></th>
-    </tr>
-    <tr>
-        <!-- Fila con valores -->
-        <td><span>&lt;&lt;[MARGEN BENEFICIO]&gt;&gt;</span></td>
-        <td><span>&lt;&lt;[BASE IMPONIBLE]&gt;&gt;</span></td>
-        <td><span>&lt;&lt;[IVA TOTAL]&gt;&gt;</span></td>
-        <td><span>&lt;&lt;[TOTAL CON IVA]&gt;&gt;</span></td>
-    </tr>
-</table>
+/* Tabla de Resumen (Summary) - Una fila con descripciones y valores */
+.summary {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.summary th,
+.summary td {
+    padding: 12px;
+    border: 1px solid #d0e2f1;
+    color: #1e3c72;
+}
+
+.summary th {
+    background-color: #f0f7ff;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+.summary tr {
+    display: table-row; /* Asegura que las filas se comporten como tablas */
+}
+
+.summary td span {
+    display: block;
+    font-size: 14px;
+}
+
 
 
 /* Tabla de Balance (Totales) */
