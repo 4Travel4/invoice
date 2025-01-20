@@ -141,48 +141,23 @@ body {
 }
 
 /* Tabla de Resumen (Summary) - Una sola línea */
-.summary {
-    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    page-break-inside: avoid;
-    text-align: center;
-}
+<table class="summary">
+    <tr>
+        <!-- Cabecera con descripciones -->
+        <th><span>Margen de Beneficio</span></th>
+        <th><span>Base Imponible</span></th>
+        <th><span>IVA (21%)</span></th>
+        <th><span>Total Factura con IVA</span></th>
+    </tr>
+    <tr>
+        <!-- Fila con valores -->
+        <td><span>&lt;&lt;[MARGEN BENEFICIO]&gt;&gt;</span></td>
+        <td><span>&lt;&lt;[BASE IMPONIBLE]&gt;&gt;</span></td>
+        <td><span>&lt;&lt;[IVA TOTAL]&gt;&gt;</span></td>
+        <td><span>&lt;&lt;[TOTAL CON IVA]&gt;&gt;</span></td>
+    </tr>
+</table>
 
-.summary tr {
-    display: flex; /* Flexbox para alinear las filas horizontalmente */
-    justify-content: space-between; /* Espacio uniforme entre los elementos */
-}
-
-.summary th,
-.summary td {
-    padding: 12px;
-    flex: 1; /* Cada celda ocupa un espacio igual */
-    border: 1px solid #d0e2f1;
-    color: #1e3c72;
-    text-align: center;
-}
-
-.summary th {
-    background-color: #f0f7ff;
-    font-weight: bold;
-    color: #1e3c72;
-}
-
-.summary span {
-    display: block;
-    font-size: 14px;
-}
-
-.summary tr:last-child td {
-    font-size: 16px;
-    font-weight: bold;
-}
 
 /* Tabla de Balance (Totales) */
 .balance {
