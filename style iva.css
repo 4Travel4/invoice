@@ -142,7 +142,7 @@ body {
 
 /* Tabla de Resumen (Summary) - Una fila con descripciones y valores */
 .summary {
-    width: 100%;
+    width: 70%;
     margin-top: 10px;
     margin-bottom: 10px;
     border-collapse: collapse;
