@@ -139,6 +139,22 @@ body {
 .inventory tr:hover {
     background-color: #e1efff;
 }
+/* Tabla de Impuestos */
+
+table.summary {
+    margin: 20px 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+table.summary th, table.summary td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+table.summary th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
 
 /* Tabla de Balance (Totales) */
 .balance {
