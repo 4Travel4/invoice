@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>PROFORMA</title>
-    <link rel="stylesheet" href="https://4travel4.github.io/invoice/style.css">
+    <title>PROFORMA CON IVA</title>
+    <link rel="stylesheet" href="https://4travel4.github.io/invoice/style iva.css">
 </head>
 <body>
 <header>
@@ -17,7 +17,7 @@
                 <p><b>TAX-C.I.F.: B 39786728</b></p>
                 <p>Tlf.: +34 659 674 025</p>
                 <p>Email: info@travel4learning.com</p>
-                <p><b>IBAN: ES1300815288610001084309 SWIFT: BSAB ESBB/Pago: Transferencia</b></p>
+                <p><b>IBAN: ES1300815288610001084309-SWIFT: BSAB ESBB-Pago: Transferencia</b></p>
             </address>
         </div>
         <div class="logo-container">
@@ -121,13 +121,23 @@
             <p><span>&lt;&lt;End&gt;&gt;</span></p>
         </tbody>
     </table>
-        
-    <table class="balance">
-        <tr>
-            <th><span>Total Factura</span></th>
-            <td><span>&lt;&lt;[TOTAL ALOJAMIENTO] + [TOTAL EXTRAS] + [TOTAL ACTIVIDADES]&gt;&gt;</span></td>
-        </tr>
-    </table>
+    
+    <table class="summary">
+    <tr>
+        <!-- Cabecera con descripciones -->
+        <th><span>Base Imponible</span></th>
+        <th><span>IVA (21%)</span></th>
+        <th><span>Cuota</span></th>
+        <th><span>Total Factura</span></th>
+    </tr>
+    <tr>
+        <!-- Fila con valores -->
+        <td><span>&lt;&lt;[BASE IMPONIBLE]&gt;&gt;</span></td>
+        <td><span>&lt;&lt;[TOTAL IVA]&gt;&gt;</span></td>
+        <td><span>&lt;&lt;[CUOTA]&gt;&gt;</span></td>
+        <td><span>&lt;&lt;[TOTAL FACTURA IVA]&gt;&gt;</span></td>
+    </tr>
+</table>
         <div class="Regimen-text">
             &lt;&lt;[CLIENTE].[TEXTO]&gt;&gt;
         </div>
